@@ -17,17 +17,12 @@ public class TestClass
 	@BeforeMethod
     public void setup()
     {
-    	 if(System.getProperty("browser").equalsIgnoreCase("Chrome"))
-    	 {
+    	
     		 driver = new ChromeDriver();
-    	 }
-    	 else if (System.getProperty("browser").equalsIgnoreCase("Firefox"))
-    	 {
-    		 driver = new FirefoxDriver();
-		 }
     	 
+    	 
+    	 driver.get("https://www.google.com/");
     	 driver.manage().window().maximize();
-    	 driver.get(System.getProperty("url"));
     	 System.out.println("browser launch successfully..");
     	 System.out.println("browser open......");
     }
